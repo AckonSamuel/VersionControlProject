@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
 
     private companion object{
-        //private const val RC_SIGN_IN = 100
+
         private const val TAG = "GOOGLE_SIGN_IN_TAG"
     }
 
@@ -46,11 +46,12 @@ class MainActivity : AppCompatActivity() {
         firebaseAuth= FirebaseAuth.getInstance()
         checkUser()
 
-        val getAction = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        val getAction = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ it ->
             val accountTask = GoogleSignIn.getSignedInAccountFromIntent(it.data)
             val account = accountTask.getResult(ApiException::class.java)
             firebaseAuthWithGoogleAccout(account)
         }
+
         binding.googleSignInBtn.setOnClickListener{
             Log.d(TAG, "onCreate: begin Google SignIn")
             val intent = googleSignInClient.signInIntent
