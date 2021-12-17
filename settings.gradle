@@ -1,0 +1,2 @@
+rootProject.name = "VersionControlProject"
+include ':app'
