@@ -29,6 +29,10 @@ class ProfileActivity : AppCompatActivity() {
             checkUser()
         }
 
+        binding.ytbutton.setOnClickListener {
+            startActivity(Intent(this, YoutubeActivity::class.java))
+        }
+
     }
 
     private fun checkUser() {

@@ -46,6 +46,15 @@ dependencies {
 
     // Also declare the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.3'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
+
+    //Adding Youtube API dependency
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+
+
+
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
