@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
+
+
+
     private companion object{
 
         private const val TAG = "GOOGLE_SIGN_IN_TAG"
@@ -67,7 +70,10 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+
+
     }
+
 
     /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -122,4 +128,13 @@ class MainActivity : AppCompatActivity() {
             }
 
     }
+
+    override fun onBackPressed() {
+        val intent= Intent(Intent.ACTION_MAIN)
+        intent.addCategory(Intent.CATEGORY_HOME)
+         startActivity(intent)
+    }
+
+
+
 }

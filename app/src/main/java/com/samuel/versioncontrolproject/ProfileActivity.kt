@@ -50,4 +50,8 @@ class ProfileActivity : AppCompatActivity() {
             binding.emailTv.text = email
         }
     }
+
+    override fun onBackPressed() {
+        finish()
+    }
 }
